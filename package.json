@@ -2,31 +2,55 @@
   "name": "cra-msal-tester",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.3",
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.8.4",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@azure/msal-browser": "^2.30.0",
+    "@azure/msal-react": "^1.4.9",
+    "@babel/core": "^7.19.6",
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/eslint-plugin": "^7.17.7",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@reduxjs/toolkit": "^1.8.6",
+    "@testing-library/dom": "^8.19.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.3",
+    "@types/ramda": "^0.28.18",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/redux-immutable-state-invariant": "^2.1.2",
+    "@types/styled-components": "^5.1.24",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "axios": "^0.27.2",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.10",
+    "msal-react-tester": "^0.1.2",
+    "msw": "^0.47.4",
+    "prettier": "^2.7.1",
+    "ramda": "^0.28.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.4",
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "redux-thunk": "^2.4.1",
+    "styled-components": "^5.3.6",
+    "typescript": "^4.8.4",
+    "web-vitals": "^2.1.4"
   },
   "browserslist": {
     "production": [
@@ -38,6 +62,31 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/**/*.d.ts",
+      "!<rootDir>/node_modules/**",
+      "!<rootDir>/build/**",
+      "!<rootDir>/dist/**"
+    ],
+    "coverageReporters": [
+      "cobertura"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 30,
+        "functions": 35,
+        "lines": 40,
+        "statements": 40
+      }
+    },
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ]
   }
 }

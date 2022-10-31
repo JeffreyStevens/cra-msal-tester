@@ -1,0 +1,28 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "plugins": ["react", "@babel"],
+    "env": {
+        "browser": true,
+        "jest": true,
+        "node": true
+    },
+    "rules": {
+        "strict": 0,
+        "eqeqeq": ["error", "always", {"null": "never"}],
+        "quotes": ["error", "single"],
+        "jsx-quotes": ["error", "prefer-single"],
+        "comma-style": ["error", "last"],
+        "comma-dangle": ["error", "always-multiline"],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+    }
+}
